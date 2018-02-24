@@ -34,11 +34,11 @@ GPIO.set_button_handler(pin, GPIO.PULL_UP, GPIO.INT_EDGE_NEG, 200, function() {
 MQTT.sub(topic, function(conn, topic, msg) {
   print('Topic:', topic, 'message:', msg);
   if (msg === 'ON' || msg === '1') {
-    GPIO.write(LED, false);
-  } else {
     GPIO.write(LED, true);
+  } else {
+    GPIO.write(LED, false);
   }
-  GPIO.toggle(LED);
+//  GPIO.toggle(LED);
   //GPIO.write(LED, false)
 }, null);
 
