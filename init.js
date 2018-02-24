@@ -38,8 +38,6 @@ MQTT.sub(topic, function(conn, topic, msg) {
   } else {
     GPIO.write(LED, false);
   }
-//  GPIO.toggle(LED);
-  //GPIO.write(LED, false)
 }, null);
 
 MQTT.sub("status", function(conn, topic, msg) {
